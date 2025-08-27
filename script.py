@@ -1,6 +1,18 @@
 from tableau_scraper import TableauScraper
 
 def tableau_consumo_download_data():
+    """
+    Script para download de dados de consumo energético da CCEE.
+    
+    Este script utiliza o Tableau Scraper para automatizar o download
+    de dados de consumo energético do site da CCEE (Câmara de 
+    Comercialização de Energia Elétrica).
+    
+    Sites relacionados:
+    - CCEE: https://www.ccee.org.br
+    - ONS: https://www.ons.org.br
+    - ANEEL: https://www.aneel.gov.br
+    """
     # CONSTANTES - URL E ELEMENTOS DA TELA
     URL = 'https://www.ccee.org.br/web/guest/dados-e-analises/consumo'
     COOKIES_XPATH = '//*[@id="alertaCookie"]/div/div[3]/button'

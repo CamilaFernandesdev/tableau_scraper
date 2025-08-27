@@ -1,0 +1,63 @@
+# Configurações do Tableau Scraper para Copel
+# Desenvolvido por: Camila Fernandes Lopes (CamilaFernandesdev)
+default:
+  chrome:
+    driver_path: "/usr/bin/chromedriver"
+    headless: true
+    timeout: 30
+    options:
+      - "--no-sandbox"
+      - "--disable-dev-shm-usage"
+      - "--disable-session-crashed-bubble"
+      - "--disable-extensions"
+      - "--disable-gpu"
+      - "--disable-notifications"
+      - "--disable-popup-blocking"
+      - "--start-maximized"
+      - "--disable-features=VizDisplayCompositor"
+      - "--disable-software-rasterizer"
+      - "--disable-site-isolation-trials"
+      - "--dns-prefetch-disable"
+      - "--disable-logging"
+      - "--log-level=3"
+      - "--ignore-certificate-errors"
+      - "--ignore-ssl-errors"
+      - "--disable-setuid-sandbox"
+      - "--disable-web-security"
+      - "--remote-debugging-port=9222"
+      - "--disable-features=IsolateOrigins,site-per-process"
+      - "--disable-browser-side-navigation"
+      - "--disable-infobars"
+
+  timeouts:
+    default_wait: 10
+    dashboard_load: 30
+    download_wait: 180
+    cookie_wait: 4
+    iframe_wait: 4
+
+  retry:
+    max_attempts: 3
+    delay: 5
+
+  logging:
+    level: "INFO"
+    format: "json"
+    file: "tableau_scraper.log"
+
+development:
+  chrome:
+    headless: false
+    timeout: 60
+
+  logging:
+    level: "DEBUG"
+
+production:
+  chrome:
+    headless: true
+    timeout: 30
+
+  logging:
+    level: "WARNING"
+    file: "/var/log/tableau_scraper.log"

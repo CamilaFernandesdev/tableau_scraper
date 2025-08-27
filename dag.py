@@ -1,8 +1,11 @@
 # -*- coding: utf-8 -*-
 """
+DAG para automação de download de dados de consumo energético da CCEE
+usando o Tableau Scraper.
+
 Created on Thu Mar 30 12:03:45 2023
 
-@author: E805511
+@author: 50338 (CamilaFernandesdev)
 """
 
 
